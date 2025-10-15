@@ -47,6 +47,9 @@ const One = () => {
         <div className='flex items-center justify-center w-full h-[10vh] md:h-[30vh] bg-green-600 fixed'>
             <h1 className='text-[55px] md:text-9xl font-bold'> TAIL WIND CSS</h1>
         </div>
+        <div className='flex items-center justify-center w-full h-[10vh] md:h-[30vh] bg-green-600'>
+            
+        </div>
       {/* Top Section */}
       <div className='flex flex-col md:flex-row h-auto md:h-screen bg-purple-900 gap-4 items-center px-4 py-6'>
         {/* Card 1 */}
