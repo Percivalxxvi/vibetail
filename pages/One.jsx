@@ -44,7 +44,7 @@ import smile from '../src/assets/smile.jpg';
 const One = () => {
   return (
     <div>
-        <div className='flex items-center justify-center w-full h-[10vh] md:h-[30vh] bg-green-600 '>
+        <div className='flex items-center justify-center w-full h-[10vh] md:h-[30vh] bg-green-600 fixed'>
             <h1 className='text-[55px] md:text-9xl font-bold'> TAIL WIND CSS</h1>
         </div>
       {/* Top Section */}
