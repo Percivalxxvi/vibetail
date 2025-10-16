@@ -4,6 +4,7 @@ import smile from "../src/assets/smile.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Fade from "../components/Fade";
 
 const One = () => {
   const settings = {
@@ -15,6 +16,38 @@ const One = () => {
     arrows: false,
     autoplay: true,
     initialSlide: 0,
+      appendDots: dots => (
+      <div
+        style={{
+            display:'flex',
+        //   backgroundColor: "green",
+          color:'red',
+          height:'20px',
+          marginBottom:'3px',
+          alignItems:'center',
+          justifyContent:'center'
+        }}
+      >
+        <ul style={{ marginTop: "0px" }}> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div
+        style={{
+          width: "30px",
+          height:'15px',
+          color: "yellow",
+        //   backgroundColor:'blue',
+          display:'flex',
+          alignItems:'center',
+          justifyContent:'center',
+          fontSize:'40px'
+        }}
+      >
+        {'•'}
+        {/* {'*'} */}
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1024,
@@ -48,6 +81,7 @@ const One = () => {
         }
       }
     ]
+    
   };
   return (
     <div>
@@ -115,46 +149,47 @@ const One = () => {
       </div>
 
       <div className="">
-        <div className="h-fit bg-amber-900 pt-4 pb-4 pl-[5%] pr-[5%]">
+        <div className="h-fit bg-orange-600 pt-4 pb-4 pl-[5%] pr-[5%]">
           <Slider {...settings}>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600">1</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600">
+                <h1 className="text-6xl text-yellow-300 font-bold">Hello</h1>
+              </div>
             </div>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">2</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">
+                <h1 className="text-6xl text-red-600 font-bold">Hola</h1>
+              </div>
             </div>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600 ">3</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600 ">
+                <h1 className="text-6xl text-yellow-300 font-bold">Aloha</h1>
+              </div>
             </div>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">4</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">
+                <h1 className="text-6xl text-red-600 font-bold">Hola</h1>
+              </div>
             </div>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600">5</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600">
+                <h1 className="text-6xl text-yellow-300 font-bold">Aloha</h1>
+              </div>
             </div>
             <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 m">6</div>
-            </div>
-            <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600 ">7</div>
-            </div>
-            <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">8</div>
-            </div>
-            <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-red-600 ">9</div>
-            </div>
-            <div className="w-4/4 bg-black">
-              <div className="h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 ">10</div>
+              <div className="flex items-center justify-center h-100 w-4/4 md:h-100  md:w-4/4 bg-yellow-300 m">
+                <h1 className="text-6xl text-red-600 font-bold">Hola</h1>
+              </div>
             </div>
           </Slider>
         </div>
       </div>
-      <div className="flex items-center justify-center h-64 bg-red-600">
-        <h1 className="text-4xl sm:text-6xl md:text-8xl text-blue-600 font-bold hover:text-white cursor-pointer transform hover:scale-110 transition-transform duration-300">
+      <div className="flex items-center justify-center h-64 bg-purple-600">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl text-yellow-300 font-bold hover:text-white cursor-pointer transform hover:scale-110 transition-transform duration-300">
           Howdy
         </h1>
       </div>
+      <Fade/>
     </div>
   );
 };
